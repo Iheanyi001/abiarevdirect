@@ -17,10 +17,13 @@ export default function Payment(){
   const [duration, setDuration] = useState('');
   const [amount, setAmount] = useState('');
   const miniMain = [
-    'MINISTRY OF AGRICULTURE', 'MINISTRY OF JUSTICE','MINISTRY OF FINANCE', 'MINISTRY OF WORKS',
+    'MINISTRY OF DIGITAL ECONOMY AND SMEs','MINISTRY OF AGRICULTURE', 'MINISTRY OF JUSTICE','MINISTRY OF FINANCE', 'MINISTRY OF WORKS',
     'MINISTRY OF SCIENCE AND TECHNOLOGY','MINISTRY OF PUBLIC UTILITIES AND WATER SUPPLY', 'MINISTRY OF COMMERCE AND INDUSTRY'
   ];
   const purposeMain = {
+    'MINISTRY OF DIGITAL ECONOMY AND SMEs':[
+      {title:'SME Certificate', duration:'This payment is for a specific project/service rendered and is a one-time transaction. Once the payment is processed, there won\'t be any recurring charges or obligations', amount:'₦20,000'},
+    ],
     'MINISTRY OF AGRICULTURE':[
       {title:'Advertisement Tax', duration:'This payment is for a specific project/service rendered and is a one-time transaction. Once the payment is processed, there won\'t be any recurring charges or obligations', amount:'₦20,000'},
       {title:'Gaming Licenses', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦15,000'},
@@ -59,7 +62,7 @@ export default function Payment(){
   }
 
   const [ministry, setMinistry] = useState([
-    'MINISTRY OF AGRICULTURE', 'MINISTRY OF JUSTICE','MINISTRY OF FINANCE', 'MINISTRY OF WORKS',
+    'MINISTRY OF DIGITAL ECONOMY AND SMEs','MINISTRY OF AGRICULTURE', 'MINISTRY OF JUSTICE','MINISTRY OF FINANCE', 'MINISTRY OF WORKS',
     'MINISTRY OF SCIENCE AND TECHNOLOGY','MINISTRY OF PUBLIC UTILITIES AND WATER SUPPLY', 'MINISTRY OF COMMERCE AND INDUSTRY'
   ])
   const [purpose, setPurpose] = useState([])
