@@ -2495,13 +2495,15 @@ ul.bottom i {
 	}
 	.sign-up-form {
 		padding: 4em 1em;
+		padding-top: 150px;
 	}
 	.footer-grid h4 {
 		font-size: 1.4em;
 	}
 	.login {
-		padding-top: 150px;
+		
 		padding: 2em 1em;
+		padding-top: 150px;
 	}
 	.log form input[type="text"], .log form input[type="password"] {
 		width: 90%;
@@ -2512,6 +2514,7 @@ ul.bottom i {
 		float: right;
 		padding: 1em 1em;
 		width: 100%;
+		padding-top: 150px;
 	}
 	.top-nav,.top-nav.contact,.top-nav.about,.top-nav.services,.top-nav.login,.top-nav.register,.top-nav.gallery-sec,.top-nav.sing-page {
 		float: none;
