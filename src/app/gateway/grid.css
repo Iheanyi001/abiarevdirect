@@ -1,0 +1,49 @@
+body {
+    background-color: #f8f9fa;
+    width: 100%;
+    
+  }
+  .payment-container {
+    max-width: 90%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .payment-option {
+    margin-bottom: 20px;
+  }
+    /* Style for each section */
+    .section {
+          display: flex;
+          float: inline-end;
+          width: 50%;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 24px;
+      }
+
+      /* Style for different sections */
+      #section1 {
+          background-color: white; 
+          color: black;
+      }
+
+      #section2 {
+          background-color: #077D53; 
+          color: black;
+      }
+
+      #section3 {
+          background-color: #077D53; 
+          color: black;
+      }
+
+      #section4 {
+          background-color: wheat;
+          color: black;
+      }

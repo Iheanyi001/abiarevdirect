@@ -1,95 +1,55 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client"
+import { useRouter } from 'next/navigation'
+import { useState, useRef } from "react"
+
 
 export default function Home() {
+    const [abssin, setAbssin] = useState();
+    const subBtn = useRef();
+    const router = useRouter()
+    function handleChange(e){
+        if(e.target.value.length == 11)
+        {
+            subBtn.current.style.backgroundColor = "#077D53"
+        }
+        else{
+            subBtn.current.style.backgroundColor = "#bbeddc"
+        }
+       setAbssin(e.target.value);
+       
+    }
+
+    const handleSubmit = (e)=>{
+        console.log('soelsoel')
+        e.preventDefault();
+        if(abssin.length == 11)
+        router.push(`payment/${abssin}`);
+    }
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div className="login">
+              <div className="login-grids">
+                <div className="col-md-6 log">
+                  <h3 className="tittle">Enter ABBSIN No <i className="glyphicon glyphicon-lock" /></h3>
+                  <p>Welcome, please enter the following to continue.</p>
+                  <p>If you have previously Login with us, <a href="#">click here</a></p>
+                  <form onSubmit={handleSubmit} method="POST">
+                    <h5>Enter ABBSIN:</h5>	
+                    <input type="text" value={abssin} name="abssin_no" onChange={handleChange} />
+                    {/* <h5>Password:</h5>
+						 <input type="password" value="">					 */}
+                    <a href="./register">
+                      <input type="submit" defaultValue="Proceed"  ref={subBtn} style={{backgroundColor:'#bbeddc'}}/>
+                    </a>
+                  </form>
+                  {/* <a href="#">Forgot Password ?</a> */}
+                </div>
+                <div className="col-md-6 login-right">
+                  <h3 className="tittle">Get ABSSIN <i className="glyphicon glyphicon-file" /></h3>
+                  <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                  <a href="registration.html" className="hvr-bounce-to-bottom button">Get ABSSIN</a>
+                </div>
+                <div className="clearfix"></div>
+              </div>
+            </div>
   )
 }
