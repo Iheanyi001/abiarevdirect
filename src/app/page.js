@@ -46,7 +46,7 @@ export default function Home() {
                 <div className="col-md-6 login-right">
                   <h3 className="tittle">Get ABSSIN <i className="glyphicon glyphicon-file" /></h3>
                   <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-                  <a href="registration.html" className="hvr-bounce-to-bottom button">Get ABSSIN</a>
+                  <a href="https://portal.abiapay.com/create-abssin" className="hvr-bounce-to-bottom button">Get ABSSIN</a>
                 </div>
                 <div className="clearfix"></div>
               </div>
