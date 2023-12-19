@@ -6,7 +6,7 @@ import { useState } from 'react'
 export default function Payment(){
   const handleSubmit = (e)=>{
     e.preventDefault();
-    router.push(`https://paystack.com/pay/gzdu76qgds`);
+    router.push(`/paymentdetails`);
 }
   const router = useRouter();
   const {id} = useParams()
