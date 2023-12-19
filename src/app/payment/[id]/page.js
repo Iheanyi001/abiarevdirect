@@ -3,12 +3,10 @@
 import { useParams, useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-
-
 export default function Payment(){
   const handleSubmit = (e)=>{
     e.preventDefault();
-    router.push(`/gateway`);
+    router.push(`https://paystack.com/pay/gzdu76qgds`);
 }
   const router = useRouter();
   const {id} = useParams()
@@ -22,42 +20,42 @@ export default function Payment(){
   ];
   const purposeMain = {
     'MINISTRY OF DIGITAL ECONOMY AND SMEs':[
-      {title:'SME Certificate', duration:'This payment is for a specific project/service rendered and is a one-time transaction. Once the payment is processed, there won\'t be any recurring charges or obligations', amount:'₦20,000'},
+      {title:'SME Certificate', duration:'One Time Payment', amount:'₦20,000'},
     ],
     'MINISTRY OF AGRICULTURE':[
-      {title:'Advertisement Tax', duration:'This payment is for a specific project/service rendered and is a one-time transaction. Once the payment is processed, there won\'t be any recurring charges or obligations', amount:'₦20,000'},
-      {title:'Gaming Licenses', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦15,000'},
-      {title:'BOREHOLE DRILLING LICENSES', duration:'Your payment covers an annual subscription/service that grants access to our services for an entire year. This payment ensures uninterrupted access and benefits for the specified duration', amount:'₦38,938'},
+      {title:'Advertisement Tax', duration:'One Time Payment', amount:'₦20,000'},
+      {title:'Gaming Licenses', duration:'Recurring Payment', amount:'₦15,000'},
+      {title:'BOREHOLE DRILLING LICENSES', duration:'One-Time Payment', amount:'₦38,938'},
     ],
     'MINISTRY OF JUSTICE':[
-      {title:'DRIVERS LICENSES', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦20,000'},
-      {title:'Rider\'s Permit', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦28,000'},
-      {title:'Drilling Permit', duration:'Your payment covers an annual subscription/service that grants access to our services for an entire year. This payment ensures uninterrupted access and benefits for the specified duration', amount:'₦10,000'},
+      {title:'DRIVERS LICENSES', duration:'Recurring Payment', amount:'₦20,000'},
+      {title:'Rider\'s Permit', duration:'Recurring Payment', amount:'₦28,000'},
+      {title:'Drilling Permit', duration:'One-Time Payment', amount:'₦10,000'},
     ],
     'MINISTRY OF FINANCE':[
-      {title:'Advertisement Tax', duration:'This payment is for a specific project/service rendered and is a one-time transaction. Once the payment is processed, there won\'t be any recurring charges or obligations', amount:'₦20,000'},
-      {title:'Gaming Licenses', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦15,000'},
-      {title:'BOREHOLE DRILLING LICENSES', duration:'Your payment covers an annual subscription/service that grants access to our services for an entire year. This payment ensures uninterrupted access and benefits for the specified duration', amount:'₦38,938'},
+      {title:'Advertisement Tax', duration:'One Time Payment', amount:'₦20,000'},
+      {title:'Gaming Licenses', duration:'Recurring Payment', amount:'₦15,000'},
+      {title:'BOREHOLE DRILLING LICENSES', duration:'One-Time Payment', amount:'₦38,938'},
     ],
     'MINISTRY OF WORKS':[
-      {title:'DRIVERS LICENSES', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦20,000'},
-      {title:'Rider\'s Permit', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦28,000'},
-      {title:'Drilling Permit', duration:'Your payment covers an annual subscription/service that grants access to our services for an entire year. This payment ensures uninterrupted access and benefits for the specified duration', amount:'₦10,000'},
+      {title:'DRIVERS LICENSES', duration:'Recurring Payment', amount:'₦20,000'},
+      {title:'Rider\'s Permit', duration:'Recurring Payment', amount:'₦28,000'},
+      {title:'Drilling Permit', duration:'One-Time Payment', amount:'₦10,000'},
     ],
     'MINISTRY OF SCIENCE AND TECHNOLOGY':[
-      {title:'Advertisement Tax', duration:'This payment is for a specific project/service rendered and is a one-time transaction. Once the payment is processed, there won\'t be any recurring charges or obligations', amount:'₦20,000'},
-      {title:'Gaming Licenses', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦15,000'},
-      {title:'BOREHOLE DRILLING LICENSES', duration:'Your payment covers an annual subscription/service that grants access to our services for an entire year. This payment ensures uninterrupted access and benefits for the specified duration', amount:'₦38,938'},
+      {title:'Advertisement Tax', duration:'One Time Payment', amount:'₦20,000'},
+      {title:'Gaming Licenses', duration:'Recurring Payment', amount:'₦15,000'},
+      {title:'BOREHOLE DRILLING LICENSES', duration:'One-Time Payment', amount:'₦38,938'},
     ],
     'MINISTRY OF PUBLIC UTILITIES AND WATER SUPPLY':[
-      {title:'DRIVERS LICENSES', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦20,000'},
-      {title:'Rider\'s Permit', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦28,000'},
-      {title:'Drilling Permit', duration:'Your payment covers an annual subscription/service that grants access to our services for an entire year. This payment ensures uninterrupted access and benefits for the specified duration', amount:'₦10,000'},
+      {title:'DRIVERS LICENSES', duration:'Recurring Payment', amount:'₦20,000'},
+      {title:'Rider\'s Permit', duration:'Recurring Payment', amount:'₦28,000'},
+      {title:'Drilling Permit', duration:'One-Time Payment', amount:'₦10,000'},
     ],
     'MINISTRY OF COMMERCE AND INDUSTRY':[
-      {title:'Advertisement Tax', duration:'This payment is for a specific project/service rendered and is a one-time transaction. Once the payment is processed, there won\'t be any recurring charges or obligations', amount:'₦20,000'},
+      {title:'Advertisement Tax', duration:'One Time Payment', amount:'₦20,000'},
       {title:'Gaming Licenses', duration:'The payment you are about to make is part of our monthly subscription plan. By processing this payment, you\'re renewing our ongoing services for the upcoming month', amount:'₦15,000'},
-      {title:'BOREHOLE DRILLING LICENSES', duration:'Your payment covers an annual subscription/service that grants access to our services for an entire year. This payment ensures uninterrupted access and benefits for the specified duration', amount:'₦38,938'},
+      {title:'BOREHOLE DRILLING LICENSES', duration:'One-Time Payment', amount:'₦38,938'},
     ],
   }
 
