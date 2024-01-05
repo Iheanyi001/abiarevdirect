@@ -11,6 +11,8 @@ export default function Nav(){
               <Image
                 src={Logo}
                 alt="Picture of the author"
+                width={150}
+                height={150}
                 />
               <a href="index.html"><h1>AbiaRev<br />Direct</h1></a>
             </div>
